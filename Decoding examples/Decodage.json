@@ -1,0 +1,94 @@
+{
+  "attributes": {
+    "id": {
+      "type": "int",
+      "hidden": true,
+      "length": 8
+    },
+    "temperature": {
+      "type": "int",
+      "transform": [
+        "c2"
+      ],
+      "length": 16,
+      "unit": 100
+    },
+    "push": {
+      "type": "int",
+      "transform": [
+        "c2"
+      ],
+      "length": 16
+    },
+    "door1": {
+      "type": "int",
+      "length": 8
+    },
+    "door0": {
+      "type": "int",
+      "length": 8
+    },
+    "door": {
+      "type": "int",
+      "hidden": true,
+      "length": 8
+    }
+  },
+  "format": [
+    {
+      "attributes": [
+        "id"
+      ]
+    },
+    {
+      "if": "id == 1",
+      "then": [
+        {
+          "attributes": [
+            "temperature"
+          ]
+        }
+      ]
+    },
+    {
+      "if": "id == 2",
+      "then": [
+        {
+          "attributes": [
+            "push"
+          ]
+        }
+      ]
+    },
+    {
+      "if": "id == 3",
+      "then": [
+        {
+          "attributes": [
+            "door"
+          ]
+        },
+        {
+          "if": "door == 1",
+          "then": [
+            {
+              "attributes": [
+                "door1"
+              ]
+            }
+          ]
+        },
+        {
+          "if": "door == 0",
+          "then": [
+            {
+              "attributes": [
+                "door0"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -7,17 +7,11 @@
     },
     "temperature": {
       "type": "int",
-      "transform": [
-        "c2"
-      ],
       "length": 16,
-      "unit": 100
+      "devide": 100
     },
     "push": {
       "type": "int",
-      "transform": [
-        "c2"
-      ],
       "length": 16
     },
     "door1": {

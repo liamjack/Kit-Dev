@@ -1,0 +1,20 @@
+{
+  "attributes": {
+    "temperature": {
+      "type": "int",
+      "length": 16,
+      "devide": 100
+    },
+    "pressure": {
+      "type": "int",
+      "length": 16
+    }
+  },
+  "format": [
+    {
+      "attributes": [
+        "temperature","pressure"
+      ]
+    }
+  ]
+}

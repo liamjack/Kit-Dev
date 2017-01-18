@@ -1,0 +1,45 @@
+{
+  "attributes": {
+    "id": {
+      "type": "int",
+      "hidden": true,
+      "length": 8
+    },
+    "temperature": {
+      "type": "int",
+      "length": 16,
+      "devide": 100
+    },
+    "push": {
+      "type": "int",
+      "length": 16
+    }
+  },
+  "format": [
+    {
+      "attributes": [
+        "id"
+      ]
+    },
+    {
+      "if": "id == 1",
+      "then": [
+        {
+          "attributes": [
+            "temperature"
+          ]
+        }
+      ]
+    },
+    {
+      "if": "id == 2",
+      "then": [
+        {
+          "attributes": [
+            "push"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,7 @@
 {
+  "defaults": {
+    "endian": "little"
+  },
   "attributes": {
     "temperature": {
       "type": "float",

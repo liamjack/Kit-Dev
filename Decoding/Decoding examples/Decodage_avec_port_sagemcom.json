@@ -1,0 +1,35 @@
+{
+  },
+  "attributes": {
+    "temperature": {
+      "type": "float",
+      "length": 32
+    },
+    "humidity": {
+      "type": "float",
+      "length": 32
+    }
+  },
+  "format": [
+    {
+      "if": "port == 1",
+      "then": [
+        {
+          "attributes": [
+            "temperature"
+          ]
+        }
+      ]
+    },
+    {
+      "if": "port == 2",
+      "then": [
+        {
+          "attributes": [
+            "humidity"
+          ]
+        }
+      ]
+    }
+  ]
+}
